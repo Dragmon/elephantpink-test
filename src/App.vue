@@ -1,28 +1,69 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main>
+    <Header />
+    <router-view />
+  </main>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Header from "./components/Header.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { Header }
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+:root {
+  --text-color: #8d8d8d;
+  --text-color-header: #000000;
+  --color-black: #000000;
+  --icon-color: #ceb889;
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("./assets/fonts/Poppins-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("./assets/fonts/Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("./assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: "Poppins-Light";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.8rem;
+}
+p,
+a,
+span {
+  font-size: 1.6rem;
 }
 </style>
