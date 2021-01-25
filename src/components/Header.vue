@@ -1,35 +1,36 @@
 <template>
-  <header id="header">
-    <div class="login">
-      <icon-base width="16" height="16" icon-name="lock"
-        ><icon-lock />
-      </icon-base>
-      <span>Login</span>
-    </div>
-    <div class="navigation">
-      <nav>
-        <ul>
-          <li><a class="hover" href="#">HOME</a></li>
-          <li><a class="hover" href="#">ABOUT</a></li>
-          <li>
-            <a href="#"
-              ><icon-base width="50" height="50" icon-name="logo"
-                ><icon-logo /> </icon-base
-            ></a>
-          </li>
-          <li><a class="hover" href="#">JEWELS</a></li>
-          <li><a class="hover" href="#">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="languageSearch">
-      <select name="language" class="language">
-        <option value="EN">EN</option>
-        <option value="ES">ES</option>
-      </select>
-      <icon-base width="16" height="16" icon-name="search"
-        ><icon-search />
-      </icon-base>
+  <header id="header" class="header" :class="scrollFixed ? 'header--fixed':''">
+    <div class="contHeader">
+      <div class="login">
+        <icon-base width="16" height="16" icon-name="lock"
+          ><icon-lock />
+        </icon-base>
+        <span>Login</span>
+      </div>
+      <div class="navigation">
+        <nav>
+          <ul>
+            <li><a class="hover" href="#">HOME</a></li>
+            <li><a class="hover" href="#">ABOUT</a></li>
+            <li>
+              <a href="#">
+                <img :src="LogoSVG"/>
+              </a>
+            </li>
+            <li><a class="hover" href="#">JEWELS</a></li>
+            <li><a class="hover" href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="languageSearch">
+        <select name="language" class="language">
+          <option value="EN">EN</option>
+          <option value="ES">ES</option>
+        </select>
+        <icon-base width="16" height="16" icon-name="search"
+          ><icon-search />
+        </icon-base>
+      </div>
     </div>
   </header>
 </template>
@@ -38,28 +39,58 @@
 import IconBase from "./IconBase";
 import IconLock from "./icons/IconLock";
 import IconSearch from "./icons/IconSearch";
-import IconLogo from "./icons/IconLogo";
+import LogoSVG from "../assets/svg/logo.svg";
 export default {
   name: "Header",
+  data(){
+    return{
+      LogoSVG,
+      scrollFixed: false
+    }
+  },
   components: {
     IconBase,
     IconLock,
-    IconSearch,
-    IconLogo
+    IconSearch
+  },
+  created(){
+    console.log('create');
+    window.addEventListener('scroll', this.handlesScroll)
+  },
+  destroyed () {
+    console.log('destroyed');
+  window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handlesScroll(){
+      this.scrollFixed = window.scrollY > 100;
+    }
   }
 };
 </script>
 
 <style scoped>
-#header {
-  height: 100px;
+.header{
+  top: -100px;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+.header--fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.contHeader {
+  height: 80px;
   background-color: #ddeaea;
   display: flex;
   align-items: center;
   padding: 0 10%;
 }
-#header a,
-#header span {
+.navigation a,
+.navigation span {
   font-size: 1.4rem;
 }
 .login,

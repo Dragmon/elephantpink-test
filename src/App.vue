@@ -1,14 +1,18 @@
 <template>
-  <main>
+  <main id="main">
     <Header />
     <router-view />
+    <ScrollIntoView />
+    <Footer />
   </main>
 </template>
 <script>
 import Header from "./components/Header.vue";
+import Footer from "./components/Footer2";
+import ScrollIntoView from "./components/ScrollIntoView";
 export default {
   name: "App",
-  components: { Header }
+  components: { Header, Footer, ScrollIntoView }
 };
 </script>
 
@@ -18,6 +22,7 @@ export default {
   --text-color-header: #000000;
   --color-black: #000000;
   --icon-color: #ceb889;
+  --padding-site: 0 10%;
 }
 @font-face {
   font-family: "Poppins-Light";
