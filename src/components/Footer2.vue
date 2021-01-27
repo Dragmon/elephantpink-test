@@ -28,7 +28,7 @@
 import IconBase from "./IconBase";
 import IconFacebook from './icons/IconFacebook.vue';
 import IconTwitter from './icons/IconTwitter.vue';
-import LogoSVG from "../assets/svg/logo.svg";
+import LogoSVG from "../assets/svg/logo2.svg";
 export default{
   name: "Footer",
   data(){

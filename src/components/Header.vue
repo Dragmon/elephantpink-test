@@ -127,7 +127,7 @@ export default {
 }
 .navigation ul li a.hover::after {
   content: "◆";
-  color: var(--icon-color);
+  color: var(--color-golden);
   text-align: center;
   width: 100%;
   display: block;

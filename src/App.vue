@@ -22,7 +22,8 @@ export default {
   --text-color-header: #000000;
   --color-black: #000000;
   --color-white: #FFFFFF;
-  --icon-color: #ceb889;
+  --color-error: #e4230e;
+  --color-golden: #ceb889;
   --border-color: #ceb889;
   --padding-site: 0 10%;
 }
@@ -50,6 +51,10 @@ export default {
   font-family: "Didot-Light";
   src: url("./assets/fonts/Didot-Light.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Blesing";
+  src: url("./assets/fonts/Blesing.ttf") format("truetype");
+}
 html {
   font-size: 62.5%;
 }
@@ -58,6 +63,7 @@ body {
   box-sizing: border-box;
   color: var(--text-color);
   font-family: "Poppins-Light";
+  background-color: #e6e6e6;
 }
 h1,
 h2,
