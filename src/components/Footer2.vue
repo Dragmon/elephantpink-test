@@ -54,6 +54,11 @@ export default{
     align-items: center;
     padding: 30px 10%;
     background-color: var(--color-black);
+    color: var(--color-white);
+  }
+  .contFooter .services a {
+    text-decoration: underline;
+    font-size: 1.5rem;
   }
   .contFooter .logo {
     justify-self: center;

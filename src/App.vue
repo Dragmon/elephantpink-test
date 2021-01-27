@@ -21,7 +21,9 @@ export default {
   --text-color: #8d8d8d;
   --text-color-header: #000000;
   --color-black: #000000;
+  --color-white: #FFFFFF;
   --icon-color: #ceb889;
+  --border-color: #ceb889;
   --padding-site: 0 10%;
 }
 @font-face {
@@ -35,6 +37,18 @@ export default {
 @font-face {
   font-family: "Poppins-SemiBold";
   src: url("./assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Didot-Bold";
+  src: url("./assets/fonts/Didot-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Didot-Medium";
+  src: url("./assets/fonts/Didot-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Didot-Light";
+  src: url("./assets/fonts/Didot-Light.ttf") format("truetype");
 }
 html {
   font-size: 62.5%;
