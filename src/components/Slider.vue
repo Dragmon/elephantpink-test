@@ -68,19 +68,30 @@ export default {
 }
 .infoSlide {
   min-height: inherit;
-  max-width: 50%;
+  max-width: 35%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 0 auto;
   position: relative;
+  top: 30%;
+}
+.infoSlide h3 {
+  font-size: 4rem;
+  font-family: "Didot-Light";
+  letter-spacing: 5px;
 }
 .infoSlide hr {
-  width: 35%;
+  width: 300px;
+  margin: 35px 0;
+  border: .3px groove #FFF;
+}
+.infoSlide p{
+  font-family: "Poppins-Light";
+  font-size: 1.4rem;
 }
 .VueCarousel-navigation-prev {
-  margin: 0 0 0 10% !important;
+  margin: 0 0 0 12% !important;
   transform: none;
   height: 25px;
   width: 25px;
@@ -96,7 +107,7 @@ export default {
   background-repeat: no-repeat;
 }
 .VueCarousel-navigation-next {
-  margin: 0 10% 0 0 !important;
+  margin: 0 12% 0 0 !important;
   height: 25px;
   width: 25px;
 }

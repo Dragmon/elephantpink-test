@@ -84,7 +84,7 @@ export default {
 }
 .contHeader {
   height: 80px;
-  background-color: #ddeaea;
+  background-color: var(--color-white);
   display: flex;
   align-items: center;
   padding: 0 10%;

@@ -63,7 +63,8 @@ body {
   box-sizing: border-box;
   color: var(--text-color);
   font-family: "Poppins-Light";
-  background-color: #e6e6e6;
+  /* background-color: #e6e6e6; */
+  background-color: var(--color-white);
 }
 h1,
 h2,
