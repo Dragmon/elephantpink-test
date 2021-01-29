@@ -1,17 +1,17 @@
 <template>
   <div>
     <Slider />
-    <Section />
+    <Collection />
     <Contact />
   </div>
 </template>
 
 <script>
-import Section from "../components/Section";
+import Collection from "../components/Collection";
 import Slider from "../components/Slider";
 import Contact from "../components/Contact";
 export default {
   name: "Home",
-  components: { Section, Slider, Contact }
+  components: { Collection, Slider, Contact }
 };
 </script>

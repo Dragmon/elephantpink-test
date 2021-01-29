@@ -17,22 +17,18 @@ export default{
     }
   },
   created(){
-    console.log('create');
     window.addEventListener('scroll', this.handlesScroll)
   },
   destroyed () {
-    console.log('destroyed');
   window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     scrollView() {
-      console.log('metodo scrollView');
       let elmnt = document.getElementById("main");
       elmnt.scrollIntoView({behavior: "smooth"});
     },
     handlesScroll(){
       this.displayButton = window.scrollY > 100;
-      console.log('displayButton', this.displayButton);
     }
   }
 }

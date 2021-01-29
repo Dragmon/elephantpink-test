@@ -54,11 +54,9 @@ export default {
     IconSearch
   },
   created(){
-    console.log('create');
     window.addEventListener('scroll', this.handlesScroll)
   },
   destroyed () {
-    console.log('destroyed');
   window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
